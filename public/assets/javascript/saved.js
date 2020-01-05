@@ -154,7 +154,7 @@ $(document).ready(function() {
                 "<ul class='list-group note-container'>",
                 "</ul>",
                 "<textarea placeholder='New Note' rows='4' cols='60'></textarea>",
-                "<button class='btn btn-success btn-save'>Save Note</button>",
+                "<button class='btn btn-dark btn-save'>Save Note</button>",
                 "</div>"
             ].join("");
             // adding the formatted html to the note modal

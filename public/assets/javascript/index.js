@@ -49,7 +49,7 @@ $(document).ready(function() {
         "<div class='panel-heading'>",
         "<h4>",
         article.headline,
-        "<a class='btn btn-success btn-save'>",
+        "<a class='btn btn-secondary btn-save'>",
         "Save Article",
         "</a>",
         "</h4>",
