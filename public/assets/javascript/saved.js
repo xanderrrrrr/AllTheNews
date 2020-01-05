@@ -5,7 +5,7 @@ $(document).ready(function() {
     // adding event listeners for dynamically generated buttons for deleting articles,
     // pulling up article notes, saving artilc enotes, and deleting article notes
     $(document).on("click", ".btn-delete", handleArticleDelete);
-    $(document).on("click", ".btn.notes", handleArticleNotes);
+    $(document).on("click", ".btn-notes", handleArticleNotes);
     $(document).on("click", ".btn-save", handleNoteSave);
     $(document).on("click", ".btn-note-delete", handleNoteDelete);
 
@@ -49,10 +49,10 @@ $(document).ready(function() {
         "<div class='panel-heading'>",
         "<h3>",
         article.headline,
-        "<a class='btn btn-danger delete'>",
+        "<a class='btn btn-danger btn-delete'>",
         "Delete from Saved",
         "</a>",
-        "< a class='btn btn-info notes'>Article Notes</a>",
+        "<a class='btn btn-info btn-notes'>Article Notes</a>",
         "</h3>",
         "</div>",
         "</div class='panel-body'>",
@@ -109,7 +109,7 @@ $(document).ready(function() {
                 currentNote = $([
                     "<li class='list-group-item note'>",
                     data.notes[i].noteText,
-                    "<button class='btn btn-danger note-delete'>x</button>",
+                    "<button class='btn btn-danger btn-note-delete'>x</button>",
                     "</li>"
                 ].join(""));
                 // store the note id on the delete button or easy access when trying to delete
@@ -146,7 +146,7 @@ $(document).ready(function() {
         $.get("/api/notes/" + currentArticle._id).then(function(data) {
             // construcitng our inital html to add to the ntoes modal
             var modalText = [
-                "<div class='container-fluid text-center>",
+                "<div class='container-fluid text-center'>",
                 "<h4>Notes For Article: ",
                 currentArticle._id,
                 "</h4>",
@@ -154,7 +154,7 @@ $(document).ready(function() {
                 "<ul class='list-group note-container'>",
                 "</ul>",
                 "<textarea placeholder='New Note' rows='4' cols='60'></textarea>",
-                "<button class='btn btn-success save'>Save Note</button>",
+                "<button class='btn btn-success btn-save'>Save Note</button>",
                 "</div>"
             ].join("");
             // adding the formatted html to the note modal

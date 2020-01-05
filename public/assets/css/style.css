@@ -168,3 +168,7 @@ html {
     bottom: 10px;
   }
   
+  .bootbox.modal {
+    z-index: 9999 !important;
+    opacity: 1 !important;
+  }

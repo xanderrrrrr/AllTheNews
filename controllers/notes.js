@@ -2,9 +2,9 @@ var Note = require("../models/Note");
 var makeDate = require("../scripts/date");
 
 module.exports = {
-    get: function(db, cb) {
+    get: function(data, cb) {
         Note.find({
-            _headlineId: DataCue._id
+            _headlineId: data._id
         }, cb);
     } ,
     save: function(data, cb) {
