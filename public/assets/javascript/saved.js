@@ -166,7 +166,6 @@ $(document).ready(function() {
                 _id: currentArticle._id,
                 notes: data || []
             };
-            console.log("this is the note data: " + noteData.notes);
             // adding some info about the article and article notes to the save button for easy access
             // when trying ot add new note
             $(".btn-save").data("article", noteData);
@@ -190,7 +189,7 @@ $(document).ready(function() {
             };
             $.post("/api/notes", noteData).then(function() {
                 // when complete, close the modal
-                bootbox.hideAall();
+                bootbox.hideAll();
             });
         }
     }
@@ -206,7 +205,7 @@ $(document).ready(function() {
             method: "DELETE"
         }).then(function() {
             // when done, hide the modal
-            bootbox.hideAall();
+            bootbox.hideAll();
         });
     }
 
