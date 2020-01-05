@@ -47,12 +47,12 @@ $(document).ready(function() {
         var panel = 
         $(["<div class='panel panel-default'>",
         "<div class='panel-heading'>",
-        "<h3>",
+        "<h4>",
         article.headline,
         "<a class='btn btn-success btn-save'>",
         "Save Article",
         "</a>",
-        "</h3>",
+        "</h4>",
         "</div>",
         "<div class='panel-body'>",
         article.summary,
@@ -72,15 +72,15 @@ $(document).ready(function() {
         // concat'd string
         var emptyAlert = 
         $(["<div class='alert alert-warning text-center'>",
-        "<h4>Uh oh, looks like we don't have any new articles.</h4>",
+        "<h5>Uh oh, looks like we don't have any new articles.</h5>",
         "</div>",
         "<div class='panel panel-default'>",
         "<div class='panel-heading text-center'>",
-        "<h3>What would you like to do?</h3>",
+        "<h4>What would you like to do?</h4>",
         "</div>",
         "<div class='panel-body text-center'>",
-        "<h4><a class='scrape-new'>Try Scraping New Articles</a></h4>",
-        "<h4><a href='/saved'>Go to Saved Articles</a></h4>",
+        "<h5><a class='scrape-new'>Try Scraping New Articles</a></h5>",
+        "<h5><a href='/saved'>Go to Saved Articles</a></h5>",
         "</div>",
         "</div>"
     ].join(""));
@@ -118,7 +118,7 @@ $(document).ready(function() {
             // already in our collection, re-render the articles on the page
             // and let the user know how many unique articles we were able to save
             initPage();
-            // bootbox.alert("<h3 class='text-center m-top-80'>" + data.message + "<h3>")
+            // bootbox.alert("<h4 class='text-center m-top-80'>" + data.message + "<h4>")
         });
     }
 });

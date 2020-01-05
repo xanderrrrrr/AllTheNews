@@ -47,13 +47,13 @@ $(document).ready(function() {
         var panel = 
         $(["<div class='panel panel-default'>",
         "<div class='panel-heading'>",
-        "<h3>",
+        "<h4>",
         article.headline,
         "<a class='btn btn-danger btn-delete'>",
         "Delete from Saved",
         "</a>",
         "<a class='btn btn-info btn-notes'>Article Notes</a>",
-        "</h3>",
+        "</h4>",
         "</div>",
         "</div class='panel-body'>",
         article.summary,
@@ -72,14 +72,14 @@ $(document).ready(function() {
         // using a joined array of html string data becuase it's easier to read/change than a concat'd string
         var emptyAlert = 
         $(["<div class='alert alert-warning text-center'>",
-        "<h4>Uh Oh. looks like we don't have any saved articles.</h4>",
+        "<h5>Uh Oh. looks like we don't have any saved articles.</h5>",
         "</div>",
         "<div class='panel panel-default'>",
         "<div class='panel-heading text-center'>",
-        "<h3>Would you like to browse available articles?</h3>",
+        "<h4>Would you like to browse available articles?</h4>",
         "</div>",
         "<div class='panel-body text-center'>",
-        "<h4><a href='/'>Browse Articles</a></h4>",
+        "<h5><a href='/'>Browse Articles</a></h5>",
         "</div>",
         "</div>"
         ].join(""));
@@ -147,9 +147,9 @@ $(document).ready(function() {
             // construcitng our inital html to add to the ntoes modal
             var modalText = [
                 "<div class='container-fluid text-center'>",
-                "<h4>Notes For Article: ",
+                "<h5>Notes For Article: ",
                 currentArticle._id,
-                "</h4>",
+                "</h5>",
                 "<hr />",
                 "<ul class='list-group note-container'>",
                 "</ul>",

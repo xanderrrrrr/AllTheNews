@@ -23,6 +23,7 @@ html {
   
   .navbar {
     margin-bottom: 0;
+    min-height: 55px !important;
   }
   
   .jumbotron {
