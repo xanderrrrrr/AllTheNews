@@ -202,7 +202,7 @@ $(document).ready(function() {
         var noteToDelete = $(this).data("_id");
         // perform a DELETE request to "/api/notes" with teh id of the note we're deleting as a param
         $.ajax({
-            url: "/api/notes" + noteToDelete,
+            url: "/api/notes/" + noteToDelete,
             method: "DELETE"
         }).then(function() {
             // when done, hide the modal
